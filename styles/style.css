@@ -211,3 +211,111 @@ header .create-legion figure img {
 		font-size: 0.7em;
 	}
 }
+
+main {
+	width: 100%;
+}
+
+article {
+	width: 100%;
+	position: relative;
+	top: -100px;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	flex-direction: column;
+
+	background-image: url("../assets/at-at.png");
+	background-repeat: no-repeat;
+}
+
+section.about {
+	width: 85%;
+	height: 70vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+.container--get-started {
+	width: 60%;
+	position: relative;
+	top: -100px;
+	z-index: 1;
+}
+
+section.get-started {
+	width: 75%;
+	height: 70vh;
+	padding: 5px 24px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+
+	background-image: url("../assets/stormtrooper-red.png");
+	color: var(--color-base-light);
+}
+
+section.get-started h1 {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 2.6em;
+	font-weight: var(--weight-medium);
+}
+
+section.get-started p {
+	font-weight: var(--weight-light);
+}
+
+section.get-started button {
+	width: 150px;
+	height: 40px;
+
+	border: 2px solid var(--color-base-light);
+	border-radius: 5px;
+
+	background-color: transparent;
+	color: var(--color-base-light);
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: var(--weight-medium);
+	font-size: 1em;
+}
+
+section.get-started button:hover {
+	cursor: pointer;
+}
+
+.container--about {
+	width: 90vw;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+section.box--about {
+	height: 32vh;
+	width: 52%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end;
+	text-align: end;
+}
+
+section.box--about h2 {
+	text-transform: uppercase;
+	font-weight: var(--weight-semibold);
+	font-size: 1.7em;
+}
+
+section.box--about hr {
+	width: 40%;
+	border: 1px solid var(--color-dark);
+}
