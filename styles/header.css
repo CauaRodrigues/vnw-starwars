@@ -1,0 +1,136 @@
+header {
+	width: 100%;
+	height: -webkit-max-content;
+	height: -moz-max-content;
+	height: max-content;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url("../assets/imperio@2x.png");
+	background-repeat: no-repeat;
+	background-position-x: center;
+	background-size: contain;
+}
+
+header figure.title {
+	width: 70%;
+	height: 75%;
+	position: absolute;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header figure.title img {
+	width: 35%;
+}
+
+header section.kylo-ren {
+	display: flex;
+	justify-content: center;
+	z-index: 1;
+	position: relative;
+	right: 4%;
+}
+
+header section.kylo-ren img {
+	width: 70%;
+}
+
+header .create-legion {
+	width: 10%;
+	height: 13vh;
+	margin-top: 32%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+header .create-legion p {
+	font-size: max(1em, 0.9vw);
+	font-weight: var(--weight-regular);
+	text-transform: uppercase;
+}
+
+header .create-legion p b {
+	font-weight: var(--weight-semibold);
+}
+
+header .create-legion hr {
+	height: 3px;
+	width: 100%;
+	background-color: var(--color-dark);
+}
+
+header .create-legion figure {
+	display: flex;
+	align-items: flex-end;
+}
+
+header .create-legion figure figcaption {
+	font-weight: var(--weight-regular);
+	margin-right: 8px;
+}
+
+header .create-legion figure figcaption span {
+	font-size: max(1.4em, 2vw);
+	font-weight: var(--weight-medium);
+}
+
+header .create-legion figure img {
+	margin: 5px 2px;
+	padding: 2px;
+	background-color: var(--color-base-gray);
+	width: 16px;
+	height: 16px;
+}
+
+@media (max-width: 700px) {
+	header .create-legion p {
+		font-size: min(16px, 0.7vw);
+	}
+
+	.create-legion figure figcaption {
+		font-size: min(0.9em, 1vw);
+	}
+
+	.create-legion figure figcaption span {
+		font-size: min(1.4em, 2vw);
+	}
+}
+
+@media (max-width: 950px) {
+	header .create-legion {
+		width: 12%;
+		height: 9vh;
+	}
+}
+
+@media (max-width: 790px) {
+	header .create-legion {
+		width: 14%;
+	}
+}
+
+@media (max-width: 640px) {
+	header .create-legion {
+		width: 15%;
+	}
+}
+
+@media (max-width: 600px) {
+	header .create-legion figure figcaption {
+		margin-right: 4px;
+	}
+	header .create-legion figure img {
+		margin: 2px;
+	}
+}
+
+@media (max-width: 500px) {
+	header .create-legion {
+		width: auto;
+		height: 8vh;
+	}
+}
