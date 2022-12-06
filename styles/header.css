@@ -88,15 +88,15 @@ header .create-legion figure img {
 
 @media (max-width: 700px) {
 	header .create-legion p {
-		font-size: min(16px, 0.7vw);
+		font-size: min(1em, 2.5vw);
 	}
 
 	.create-legion figure figcaption {
-		font-size: min(0.9em, 1vw);
+		font-size: min(1.4em, 2vw);
 	}
 
 	.create-legion figure figcaption span {
-		font-size: min(1.4em, 2vw);
+		font-size: min(2em, 3.5vw);
 	}
 }
 
