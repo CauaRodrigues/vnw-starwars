@@ -1,0 +1,200 @@
+section.about {
+	width: 85vw;
+	height: 80vh;
+	position: relative;
+	top: -120px;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.container--get-started {
+	width: 340px;
+	height: 70vh;
+
+	z-index: 1;
+}
+
+section.get-started {
+	width: 100%;
+	height: 100%;
+	padding: 5px 24px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+
+	background-image: url("../assets/stormtrooper-red.png");
+	background-repeat: no-repeat;
+
+	color: var(--color-base-light);
+}
+
+section.get-started h1 {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: min(2em, 6.5vw);
+	font-weight: var(--weight-medium);
+}
+
+section.get-started p {
+	font-size: min(1em, 3.5vw);
+	font-weight: var(--weight-light);
+}
+
+section.get-started .box--test-update {
+	width: 100%;
+	text-align: end;
+}
+
+section.get-started span {
+	font-size: min(0.7em, 2vw);
+	font-weight: var(--weight-light);
+}
+
+section.get-started button {
+	width: 150px;
+	height: 40px;
+
+	border: 2px solid var(--color-base-light);
+	border-radius: 5px;
+
+	background-color: transparent;
+	color: var(--color-base-light);
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: var(--weight-medium);
+	font-size: 0.9em;
+
+	z-index: 1;
+	position: relative;
+}
+
+section.get-started button::before {
+	content: "";
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	background-color: var(--color-dark);
+
+	transform-origin: center left;
+	transform: scaleX(0);
+	transition: transform 0.3s ease-in-out;
+}
+
+section.get-started button:hover {
+	cursor: pointer;
+	font-size: 1em;
+}
+
+section.get-started button:hover::before {
+	transform-origin: center left;
+	transform: scaleX(1);
+}
+
+.container--about {
+	width: max-content;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 24px;
+}
+
+section.box--about {
+	height: 30vh;
+	width: 30vw;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end;
+	text-align: end;
+}
+
+section.box--about h2 {
+	text-transform: uppercase;
+	font-weight: var(--weight-semibold);
+	font-size: min(1.5em, 4vw);
+}
+
+section.box--about hr {
+	width: 40%;
+	background-color: var(--color-dark);
+	border: 1px solid var(--color-dark);
+}
+
+section.box--about p {
+	font-size: min(1em, 2.8vw);
+	font-weight: var(--weight-regular);
+}
+
+section.structure-game {
+	width: 85vw;
+	margin-top: 2rem;
+	position: relative;
+	top: 40px;
+	z-index: 1;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+section.structure-game figure.darthmaul {
+	width: 85vw;
+}
+
+section.structure-game figure:last-of-type img {
+	width: 45vw;
+}
+
+section.structure {
+	width: 55vw;
+	position: relative;
+	top: -50px;
+	right: 10%;
+	text-align: end;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+section.structure h2 {
+	text-transform: uppercase;
+	line-height: 0.9;
+	font-size: min(3.5em, 4vw);
+	font-weight: var(--weight-semibold);
+}
+
+section.structure h2 span {
+	font-weight: var(--weight-extrabold);
+}
+
+section.structure ul {
+	width: 100%;
+	height: max-content;
+	display: flex;
+	flex-direction: column;
+}
+
+section.structure ul li {
+	width: 100%;
+	padding: 6px 8px;
+
+	text-transform: uppercase;
+	font-weight: var(--weight-regular);
+	font-size: min(1.3em, 2.5vw);
+}
+
+section.structure ul li:hover {
+	background-color: var(--color-hover-red);
+	color: var(--color-base-light);
+}

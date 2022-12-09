@@ -1,4 +1,5 @@
 @import "./header.css";
+@import "./about.css";
 
 :root {
 	/* colors */
@@ -59,7 +60,6 @@ main {
 	width: 100%;
 }
 
-/* Section About*/
 article {
 	width: 100%;
 	position: relative;
@@ -82,211 +82,9 @@ article hr.divider {
 	border: 4px solid var(--color-gray);
 }
 
-section.about {
-	width: 85vw;
-	height: 80vh;
-	position: relative;
-	top: -120px;
-
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-end;
-}
-
-.container--get-started {
-	width: 340px;
-	height: 70vh;
-
-	z-index: 1;
-}
-
-section.get-started {
-	width: 100%;
-	height: 100%;
-	padding: 5px 24px;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-	align-items: center;
-
-	background-image: url("../assets/stormtrooper-red.png");
-	background-repeat: no-repeat;
-
-	color: var(--color-base-light);
-}
-
-section.get-started h1 {
-	text-align: center;
-	text-transform: uppercase;
-	font-size: min(2em, 6.5vw);
-	font-weight: var(--weight-medium);
-}
-
-section.get-started p {
-	font-size: min(1em, 3.5vw);
-	font-weight: var(--weight-light);
-}
-
-section.get-started .box--test-update {
-	width: 100%;
-	text-align: end;
-}
-
-section.get-started span {
-	font-size: min(0.7em, 2vw);
-	font-weight: var(--weight-light);
-}
-
-section.get-started button {
-	width: 150px;
-	height: 40px;
-
-	border: 2px solid var(--color-base-light);
-	border-radius: 5px;
-
-	background-color: transparent;
-	color: var(--color-base-light);
-	text-align: center;
-	text-transform: uppercase;
-	font-weight: var(--weight-medium);
-	font-size: 0.9em;
-
-	z-index: 1;
-	position: relative;
-}
-
-section.get-started button::before {
-	content: "";
-	z-index: -1;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-
-	background-color: var(--color-dark);
-
-	transform-origin: center left;
-	transform: scaleX(0);
-	transition: transform 0.3s ease-in-out;
-}
-
-section.get-started button:hover {
-	cursor: pointer;
-	font-size: 1em;
-}
-
-section.get-started button:hover::before {
-	transform-origin: center left;
-	transform: scaleX(1);
-}
-
-.container--about {
-	width: max-content;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 1rem;
-	margin-bottom: 24px;
-}
-
-section.box--about {
-	height: 30vh;
-	width: 30vw;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: flex-end;
-	text-align: end;
-}
-
-section.box--about h2 {
-	text-transform: uppercase;
-	font-weight: var(--weight-semibold);
-	font-size: min(1.5em, 4vw);
-}
-
-section.box--about hr {
-	width: 40%;
-	background-color: var(--color-dark);
-	border: 1px solid var(--color-dark);
-}
-
-section.box--about p {
-	font-size: min(1em, 2.8vw);
-	font-weight: var(--weight-regular);
-}
-
-section.structure-game {
-	width: 85vw;
-	margin-top: 2rem;
-	position: relative;
-	top: 40px;
-	z-index: 1;
-
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-section.structure-game figure.darthmaul {
-	width: 85vw;
-}
-
-section.structure-game figure:last-of-type img {
-	width: 45vw;
-}
-
-section.structure {
-	width: 55vw;
-	position: relative;
-	top: -50px;
-	right: 10%;
-	text-align: end;
-	display: flex;
-	flex-direction: column;
-	gap: 1.5rem;
-}
-
-section.structure h2 {
-	text-transform: uppercase;
-	line-height: 0.9;
-	font-size: min(3.5em, 4vw);
-	font-weight: var(--weight-semibold);
-}
-
-section.structure h2 span {
-	font-weight: var(--weight-extrabold);
-}
-
-section.structure ul {
-	width: 100%;
-	height: max-content;
-	display: flex;
-	flex-direction: column;
-}
-
-section.structure ul li {
-	width: 100%;
-	padding: 6px 8px;
-
-	text-transform: uppercase;
-	font-weight: var(--weight-regular);
-	font-size: min(1.3em, 2.5vw);
-}
-
-section.structure ul li:hover {
-	background-color: var(--color-hover-red);
-	color: var(--color-base-light);
-}
-
 section.attributes {
 	width: 100%;
-	height: 85vh;
-	padding: 24px 0;
+	padding: 8rem 0;
 	z-index: 0;
 	position: relative;
 	top: -110px;
@@ -310,40 +108,167 @@ section.attributes h2 {
 
 section.gallery-attributes {
 	width: 90%;
-	height: 70vh;
-	border: 1px solid #000;
+	height: max-content;
 	display: grid;
-	grid-template-columns: 50% 25% 25%;
+	grid-template-columns: 2fr 1fr 1fr;
 }
 
 section.gallery-attributes figure {
+	height: 38vh;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
 }
 
 section.gallery-attributes figure:nth-child(1) {
-	border: 1px solid #000;
+	height: 100%;
 	grid-row-start: 1;
 	grid-row-end: 3;
-
 	background-image: url("../assets/star-wars-battlefront.png");
+}
+section.gallery-attributes figure:nth-child(1) .box--content {
+	background-color: #5d1c99;
+	gap: 3rem;
+}
+section.gallery-attributes figure:nth-child(1) .box--content h3 {
+	font-size: min(1.5em, 4vw);
+}
+section.gallery-attributes figure:nth-child(1) .box--content p {
+	font-size: min(1em, 3vw);
 }
 
 section.gallery-attributes figure:nth-child(2) {
 	background-image: url("../assets/stormtrooper.png");
 }
+section.gallery-attributes figure:nth-child(2) .box--content {
+	background-color: var(--color-hover-red);
+}
 
 section.gallery-attributes figure:nth-child(3) {
 	background-image: url("../assets/atat-stormtrooper.png");
+}
+section.gallery-attributes figure:nth-child(3) .box--content {
+	background-color: #cb9241;
 }
 
 section.gallery-attributes figure:nth-child(4) {
 	background-image: url("../assets/ships-battling.png");
 }
+section.gallery-attributes figure:nth-child(4) .box--content {
+	background-color: #5dcd2b;
+}
 
 section.gallery-attributes figure:nth-child(5) {
 	background-image: url("../assets/capitainphasma-stormtrooper.png");
+}
+section.gallery-attributes figure:nth-child(5) .box--content {
+	background-color: #1622c8;
+}
+
+section.gallery-attributes figure .box--content {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	padding: 0.5rem;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 1em;
+
+	opacity: 0.7;
+	transform: scale(0);
+	transition: 1s ease;
+}
+
+.box--content .content {
+	height: 80%;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+section.gallery-attributes figure:hover .box--content {
+	transform: scale(1.05);
+}
+
+section.gallery-attributes figure .box--content .border-content {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.box--content span {
+	border: 3px solid var(--color-base-light);
+	width: 30px;
+	height: 30px;
+}
+
+.box--content span.top-left-angle {
+	border-right: none;
+	border-bottom: none;
+}
+
+.box--content span.bottom-right-angle {
+	border-left: none;
+	border-top: none;
+}
+
+section.gallery-attributes figure .box--content h3 {
+	width: 175px;
+	text-transform: uppercase;
+	font-weight: var(--weight-extrabold);
+	font-size: min(1.3em, 4vw);
+}
+
+section.gallery-attributes figure .box--content p {
+	font-weight: var(--weight-regular);
+	font-size: min(0.9em, 3vw);
+}
+
+section.gallery-attributes figure .box--content button {
+	width: 110px;
+	height: 45px;
+
+	border: 2px solid var(--color-base-light);
+	background-color: transparent;
+
+	color: var(--color-base-light);
+	font-weight: var(--weight-medium);
+	font-size: min(1em, 3vw);
+	cursor: pointer;
+}
+
+section.hierarchy {
+	width: 100%;
+	gap: 24px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--color-base-dark);
+}
+
+section.hierarchy figure {
+	width: 90%;
+}
+
+section.hierarchy figure img {
+	width: 100%;
+	height: 95vh;
+}
+
+section.hierarchy .container--text {
+	width: 90%;
+	text-align: end;
+	display: flex;
+	justify-content: flex-end;
+}
+
+section.hierarchy .container--text p {
+	width: 50%;
+	font-size: min(0.9em, 3vw);
+	font-weight: var(--weight-light);
 }
 
 @media (max-width: 1400px) {
@@ -417,6 +342,16 @@ section.gallery-attributes figure:nth-child(5) {
 
 	section.attributes {
 		top: 0;
+		height: min-content;
+	}
+
+	section.gallery-attributes {
+		grid-template-columns: 100%;
+		height: max-content;
+	}
+
+	section.gallery-attributes figure {
+		height: 35vh;
 	}
 }
 
