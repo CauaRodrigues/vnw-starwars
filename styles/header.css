@@ -53,7 +53,7 @@ header .create-legion p {
 	text-transform: uppercase;
 }
 
-header .create-legion p b {
+header .create-legion p:last-child {
 	font-weight: var(--weight-semibold);
 }
 
