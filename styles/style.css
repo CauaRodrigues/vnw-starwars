@@ -84,7 +84,7 @@ article hr.divider {
 
 section.attributes {
 	width: 100%;
-	padding: 8rem 0;
+	padding-top: 8rem;
 	z-index: 0;
 	position: relative;
 	top: -110px;
@@ -253,11 +253,6 @@ section.hierarchy figure {
 	width: 90%;
 }
 
-section.hierarchy figure img {
-	width: 100%;
-	height: 95vh;
-}
-
 section.hierarchy .container--text {
 	width: 90%;
 	text-align: end;
@@ -266,9 +261,114 @@ section.hierarchy .container--text {
 }
 
 section.hierarchy .container--text p {
-	width: 50%;
+	width: 60%;
 	font-size: min(0.9em, 3vw);
 	font-weight: var(--weight-light);
+}
+
+.title--how-player {
+	width: 100%;
+	text-align: end;
+	margin: 4rem;
+}
+
+.title--how-player h2.title {
+	width: 70vw;
+}
+
+section.how-player {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	position: relative;
+}
+
+section.how-player figure {
+	z-index: 0;
+	position: absolute;
+	top: -25vw;
+	left: 0vw;
+	width: 80%;
+}
+
+section.container--steps {
+	width: 65%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	background-color: var(--color-base-light);
+	color: var(--color-dark);
+}
+
+.step {
+	width: 180px;
+	height: 200px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.step h3 {
+	font-weight: var(--weight-light);
+	font-size: min(2.5em, 5.4vw);
+}
+
+.step button {
+	width: 90%;
+	height: 45px;
+
+	background-color: var(--color-hover-red);
+	color: var(--color-base-light);
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: var(--weight-light);
+	font-size: 1em;
+
+	z-index: 1;
+	position: relative;
+}
+
+.step button::before {
+	content: "";
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: var(--color-dark);
+	transform-origin: center left;
+	transform: scaleX(0);
+	transition: transform 0.4s ease-out;
+}
+
+.step button:hover {
+	cursor: pointer;
+}
+
+.step button:hover::before {
+	transform-origin: center left;
+	transform: scaleX(1);
+}
+
+.step p {
+	font-size: min(0.8em, 2.5vw);
+	font-weight: var(--weight-light);
+}
+
+.step hr.line-bottom {
+	width: 50px;
+	border: 2px solid var(--color-dark);
+}
+
+.step:hover h3 {
+	font-weight: var(--weight-semibold);
+}
+
+.step:hover hr.line-bottom {
+	border-color: var(--color-hover-red);
 }
 
 @media (max-width: 1400px) {
@@ -353,9 +453,23 @@ section.hierarchy .container--text p {
 	section.gallery-attributes figure {
 		height: 35vh;
 	}
+
+	.title--how-player h2.title {
+		width: 90%;
+	}
+
+	section.how-player figure {
+		left: -10vw;
+		width: 100%;
+	}
+
+	section.container--steps {
+		width: 50%;
+		flex-direction: column;
+	}
 }
 
-@media (max-width: 620px) {
+@media (max-width: 650px) {
 	.container--get-started {
 		width: 70vw;
 		height: 100vw;
@@ -376,5 +490,9 @@ section.hierarchy .container--text p {
 
 	.container--about figure {
 		width: 70vw;
+	}
+
+	section.how-player figure {
+		left: -40vw;
 	}
 }
