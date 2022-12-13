@@ -281,14 +281,16 @@ section.how-player {
 	display: flex;
 	justify-content: flex-end;
 	position: relative;
+	top: -30px;
+	background-color: var(--color-base-light);
 }
 
 section.how-player figure {
 	z-index: 0;
 	position: absolute;
-	top: -25vw;
-	left: 0vw;
-	width: 80%;
+	top: -20vw;
+	left: 10vw;
+	width: 20%;
 }
 
 section.container--steps {
@@ -361,6 +363,7 @@ section.container--steps {
 .step hr.line-bottom {
 	width: 50px;
 	border: 2px solid var(--color-dark);
+	background-color: var(--color-dark);
 }
 
 .step:hover h3 {
@@ -369,6 +372,82 @@ section.container--steps {
 
 .step:hover hr.line-bottom {
 	border-color: var(--color-hover-red);
+	background-color: var(--color-hover-red);
+}
+
+footer {
+	width: 100%;
+	height: 80vh;
+	margin-top: 8rem;
+	display: flex;
+}
+
+footer section.content {
+	background-color: var(--color-base-red);
+	width: 70vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+footer section.content figure.darthvader {
+	width: 50%;
+	position: absolute;
+	left: 85%;
+	top: -90px;
+}
+
+footer .container-content {
+	width: 55%;
+	height: 80%;
+	margin-top: 5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	gap: 1rem;
+	color: var(--color-base-light);
+}
+
+footer .container-content hr.divider-middle {
+	border: 3px solid var(--color-hover-red);
+	background-color: var(--color-hover-red);
+	width: 100%;
+}
+
+footer .container-content p {
+	font-weight: var(--weight-light);
+	font-size: min(1em, 2.5vw);
+}
+
+footer .container-content figure:first-of-type {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+footer .container-content h2 {
+	text-transform: uppercase;
+	font-size: min(2em, 5.4vw);
+	font-weight: var(--weight-extrabold);
+}
+
+footer section.content-text-credits {
+	width: 40vw;
+	padding-bottom: 24px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+footer section.content-text-credits p {
+	width: 60%;
+	font-weight: var(--weight-regular);
+	font-size: min(0.8em, 2.5vw);
+}
+
+footer section.content-text-credits a {
+	word-wrap: break-word;
+	color: var(--color-dark);
 }
 
 @media (max-width: 1400px) {
@@ -460,12 +539,42 @@ section.container--steps {
 
 	section.how-player figure {
 		left: -10vw;
-		width: 100%;
+		width: 70%;
 	}
 
 	section.container--steps {
 		width: 50%;
 		flex-direction: column;
+	}
+
+	footer {
+		flex-direction: column;
+		height: 120vh;
+	}
+
+	footer section.content {
+		width: 100%;
+		height: 120vh;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+
+	footer section.content .container-content {
+		width: 80%;
+		height: 50%;
+	}
+
+	footer section.content figure.darthvader {
+		position: absolute;
+		top: 70%;
+		left: 0;
+	}
+
+	footer section.content-text-credits {
+		width: 100%;
+		height: 80vh;
+		justify-content: flex-start;
+		align-items: flex-end;
 	}
 }
 
@@ -494,5 +603,10 @@ section.container--steps {
 
 	section.how-player figure {
 		left: -40vw;
+		width: 100%;
+	}
+
+	footer section.content-text-credits {
+		align-items: center;
 	}
 }
